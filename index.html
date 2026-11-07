@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Voice Prank</title>
+<style>
+body {
+  background: #050505;
+  color: #00ff66;
+  font-family: monospace;
+  text-align: center;
+  padding: 30px 15px;
+}
+h1 { color: red; }
+button {
+  padding: 16px 25px;
+  background: #d00000;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+}
+#status {
+  margin-top: 50px;
+  font-size: 20px;
+}
+</style>
+</head>
+<body>
+
+<h1>bro code</h1>
+<p>Voice simulation ready</p>
+
+<button onclick="start()">START</button>
+<div id="status">Waiting...</div>
+
+<script>
+let messages = [
+  "Hello. bokachoda",
+  "I'm your friend SHREOSI GHOSH",
+  "chutiya choda kanki bichi bogoler chuler ukin",
+  "kuttabichi kuttarkam lawrarosun tomar puchka",
+  "gudmarnichoda damnarbichi chagolerput",
+  "benchod suarchudi jaterbal lonkamarani",
+  "randi magi r gud podmarni bichirbal"
+];
+
+function speak(text) {
+  return new Promise(resolve => {
+    let speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US";
+    speech.rate = 0.85;
+    speech.pitch = 0.65;
+
+    speech.onend = resolve;
+    speech.onerror = resolve;
+
+    speechSynthesis.speak(speech);
+  });
+}
+
+async function start() {
+  document.querySelector("button").disabled = true;
+  document.getElementById("status").innerText =
+    "AI VOICE ACTIVATED...";
+
+  for (let msg of messages) {
+    document.getElementById("status").innerText = msg;
+    await speak(msg);
+    await new Promise(r => setTimeout(r, 1500));
+  }
+
+  document.getElementById("status").innerText =
+    "made by Shreosi Ghosh";
+  document.querySelector("button").disabled = false;
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
